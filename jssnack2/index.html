@@ -14,10 +14,10 @@
         <h2>Scegli un numero da 1 a 5 e pari o dispari</h2>
         <form id="form">
             <input type="number" min="1" max="5" id="user-number">
-            <input type="radio" value="even" name="even-odd" id="even">
-            <label for="even">Pari</label>
-            <input type="radio" value="odd" name="even-odd" id="odd">
-            <label for="odd">Dispari</label>
+            <select id="even-odd">
+                <option value="even">Pari</option>
+                <option value="odd">Dispari</option>
+            </select>
             <button id="button">Invia</button>
         </form>
 

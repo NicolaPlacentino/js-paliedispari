@@ -6,9 +6,13 @@
 // Dichiariamo chi ha vinto.
 
 const userNumber = document.getElementById('user-number')
-const radio = document.getElementsByName('even-odd')
 const button = document.getElementById('button')
 const form = document.getElementById('form')
+const select = document.getElementById('even-odd')
+
+
+const calcMessage = document.getElementById('calculation')
+const winnerMessage = document.getElementById('winner')
 
 function generateNumber() {
     const random = Math.random()
@@ -17,3 +21,44 @@ function generateNumber() {
     return randomNumber
 }
 
+function isEven(number) {
+    let result = false
+
+    if (number % 2 === 0){
+        result = true
+    }
+
+    return result
+}
+
+
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+
+
+    const cpuNumber = generateNumber()
+   
+    const sum = cpuNumber + parseInt(userNumber.value.trim())
+
+    let calculation = `${userNumber.value} + ${cpuNumber} = ${sum}`
+    let winner = ''
+
+    console.log(sum % 2)
+
+    if (select.value === 'even') {  
+        if (isEven(sum)) {
+            winner = 'giocatore!'
+        } else {
+            winner = 'computer!'
+        }
+    } else {
+        if (!isEven(sum)) {
+            winner = 'giocatore!'
+        } else {
+            winner = 'computer!'
+        }
+    }
+
+    calcMessage.innerText = calculation
+    winnerMessage.innerText = `Vince il ${winner}`
+})

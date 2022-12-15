@@ -20,7 +20,7 @@ h2, h3{
     margin: 10px 0;
 }
 
-input, button{
+input, button, select{
     padding: 10px;
     border-radius: 5px;
     margin: 4px;
