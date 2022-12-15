@@ -10,7 +10,7 @@ const radio = document.getElementsByName('even-odd')
 const button = document.getElementById('button')
 const form = document.getElementById('form')
 
-function randomNumber() {
+function generateNumber() {
     const random = Math.random()
     const randomNumber = Math.floor(random * 5 + 1)
 
