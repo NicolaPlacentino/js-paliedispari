@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicola Placentino">
+    <title>Pari e dispari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main>
+        <h2>Scegli un numero da 1 a 5 e pari o dispari</h2>
+        <form>
+            <input type="number" min="1" max="5" id="user-number">
+            <input type="radio" value="even" name="even-odd" id="even">
+            <label for="even">Pari</label>
+            <input type="radio" value="odd" name="even-odd" id="odd">
+            <label for="odd">Dispari</label>
+            <button id="button">Invia</button>
+        </form>
+
+        <h2>Il vincitore è:</h2>
+        <div>
+            <span id="user-number-area"></span> + <span id="cpu-number"></span> = <span id="sum"></span>
+            <h3 id="winner"></h3>
+        </div>
+    </main>
+</body>
+</html>
