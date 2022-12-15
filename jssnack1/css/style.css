@@ -16,8 +16,8 @@ main{
     padding: 20px;
 }
 
-h2{
-    margin-bottom: 10px;
+h2, h3{
+    margin: 10px 0;
 }
 
 input, button{
